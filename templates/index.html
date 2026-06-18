@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Purchase Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+
+    <h1> AI Purchase Predictor</h1>
+    <p>Predict customer purchase behavior using Logistic Regression</p>
+
+    <form action="/predict" method="POST">
+
+        <input
+            type="number"
+            name="age"
+            placeholder="Enter Age"
+            required>
+
+        <input
+            type="number"
+            name="salary"
+            placeholder="Enter Salary"
+            required>
+
+        <button type="submit">
+            Predict
+        </button>
+
+    </form>
+
+    {% if prediction_text %}
+        <div class="prediction-box">
+            {{ prediction_text }}
+        </div>
+    {% endif %}
+
+    <div class="chart-section">
+        <h3>Model Features</h3>
+
+        <div class="bar-container">
+            <div class="bar age-bar" style="width: {{ age_percent }}%">
+                Age: {{ age }}
+            </div>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar salary-bar" style="width: {{ salary_percent }}%">
+                Salary: ₹{{ salary }}
+            </div>
+        </div>
+    </div>
+    
+
+
+</div>
+
+</body>
+</html>

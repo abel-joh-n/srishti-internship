@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #3b82f6
+    );
+}
+
+.card{
+    width:420px;
+    padding:40px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    box-shadow:
+        0 0 25px rgba(59,130,246,0.4),
+        0 0 50px rgba(59,130,246,0.2);
+
+    color:white;
+    text-align:center;
+}
+
+h1{
+    color:white;
+}
+
+p{
+    color:#dcdcdc;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.2);
+
+    color:white;
+    border-radius:12px;
+}
+
+input::placeholder{
+    color:#e0e0e0;
+}
+
+input:focus{
+    outline:none;
+    border:2px solid #243B55;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#243B55;
+    color:white;
+
+    font-size:17px;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+.result{
+    margin-top:25px;
+    padding:15px;
+
+    border-radius:10px;
+
+    background:#e8f5e9;
+    color:#2e7d32;
+
+    font-weight:bold;
+    font-size:18px;
+}
+
+.prediction-box{
+    margin-top:20px;
+    padding:15px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    animation:fadeIn 0.5s ease;
+}
+
+.chart-section{
+    margin-top:20px;
+}
+
+.bar-container{
+    background:#ddd;
+    border-radius:10px;
+    margin:10px 0;
+}
+
+.bar{
+    padding:10px;
+    color:white;
+    border-radius:10px;
+}
+
+.age-bar{
+    background:#3b82f6;
+}
+
+.salary-bar{
+    background:#10b981;
+}
+
